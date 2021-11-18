@@ -1,29 +1,40 @@
 import React from "react";
 import "components/Appointment/styles.scss";
-import Header from "./Header";
-import Empty from "./Empty";
-import Show from "./Show";
+
+import Header from "components/Appointment/Header";
+import Empty from "components/Appointment/Empty";
+import Show from "components/Appointment/Show";
+// import Form from "components/Appointment/Form";
+// import Status from "components/Appointment/Status";
+// import Confirm from "components/Appointment/Confirm";
+// import Error from "components/Appointment/Error";
+
+import useVisualMode from "hooks/useVisualMode";
 
 
 export default function Appointment(props) {
 
+  const EMPTY = "EMPTY";
+  const SHOW = "SHOW";
+  const CREATE= "CREATE";
+
+  const { mode, transition, back} = useVisualMode(
+    props.interview? SHOW : EMPTY
+  );
+
   const { time, interview } = props; 
 
   return (
-    (props.interview ? 
       <div> 
         <Header time={time}/> 
-        <Show 
-          student={interview.student} 
-          interviewer={interview.interviewer} 
-        /> 
-      </div> : 
-      <div>
-        <Header 
-          time={time}
-        /> 
-        <Empty/>
-      </div>)
+          {mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
+          {mode === SHOW && (
+          <Show
+            student={props.interview.student}
+            interviewer={[]}
+          />
+          )}
+      </div>
   );
 
 };
