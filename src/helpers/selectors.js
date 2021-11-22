@@ -28,6 +28,7 @@ export function getInterview(state, interview) {
 
 // ********** GET INTERVIEWERS FOR DAY **********
 export function getInterviewersForDay(state, day) {
+
   const filteredAppointments = state.days.filter(d => d.name === day);
   
   let interviewers = [];

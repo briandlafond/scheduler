@@ -4,10 +4,6 @@ import "components/Appointment/styles.scss";
 import Header from "components/Appointment/Header";
 import Empty from "components/Appointment/Empty";
 import Show from "components/Appointment/Show";
-// import Form from "components/Appointment/Form";
-// import Status from "components/Appointment/Status";
-// import Confirm from "components/Appointment/Confirm";
-// import Error from "components/Appointment/Error";
 
 import useVisualMode from "hooks/useVisualMode";
 
@@ -18,11 +14,11 @@ export default function Appointment(props) {
   const SHOW = "SHOW";
   const CREATE= "CREATE";
 
-  const { mode, transition, back} = useVisualMode(
+  const { mode, transition} = useVisualMode(
     props.interview? SHOW : EMPTY
   );
 
-  const { time, interview } = props; 
+  const { time } = props; 
 
   return (
       <div> 
@@ -39,4 +35,3 @@ export default function Appointment(props) {
 
 };
 
-    // (time ? <article className="appointment">Appointment at {time}</article> : <article className="appointment">No Appointment</article>)
