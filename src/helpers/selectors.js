@@ -1,4 +1,3 @@
-// ********** GET APPOINTMENTS FOR DAY **********
 export function getAppointmentsForDay(state, day) {
   const filteredAppointments = state.days.filter(d => d.name === day);
 
@@ -11,24 +10,18 @@ export function getAppointmentsForDay(state, day) {
   return appointments;
 }
 
-// ********** GET INTERVIEW **********
 export function getInterview(state, interview) {
-
   if (!interview) {
     return null
   }
-
   const interviewObj = { 
     student: interview.student,
     interviewer: state.interviewers[interview.interviewer]
   }
-  
   return interviewObj;
 }
 
-// ********** GET INTERVIEWERS FOR DAY **********
 export function getInterviewersForDay(state, day) {
-
   const filteredAppointments = state.days.filter(d => d.name === day);
   
   let interviewers = [];
