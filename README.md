@@ -3,7 +3,8 @@ Interview Scheduler is a single page React application which allows a users to b
 
 ## Setup
 
-Install dependencies with `npm install` and navigate to 'http://localhost:8000/'
+- Clone repository
+- Install dependencies with `npm install` and navigate to 'http://localhost:8000/'
 
 ## Running Webpack Development Server
 
@@ -22,3 +23,8 @@ npm test
 ```
 npm run storybook
 ```
+
+## Final Product
+
+- Main Page - Create, Edit, Or Delete interview
+!["screenshot of main page"]()
