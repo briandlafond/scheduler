@@ -12,6 +12,7 @@ import Error from "components/Appointment/Error";
 import useVisualMode from "hooks/useVisualMode";
 
 export default function Appointment(props) {
+
   const EMPTY = "EMPTY";
   const SHOW = "SHOW";
   const CREATE = "CREATE";
@@ -33,13 +34,11 @@ export default function Appointment(props) {
 
     const interview = {
       student: name,
-      interviewer: interviewer
+      interviewer
     };
 
-    console.log(interview); //////////////
-
     if(!interview.interviewer){
-      transition(ERROR_MISSING_INFO, true) /////// -> 
+      transition(ERROR_MISSING_INFO, true)
     } else {
       props.bookInterview(props.id, interview)
       .then(() => {
@@ -57,6 +56,7 @@ export default function Appointment(props) {
   };
 
   const cancel = function() {
+
     transition(DELETING, true);
 
     props.cancelInterview(props.id)
@@ -66,6 +66,7 @@ export default function Appointment(props) {
     .catch(error => {
       transition(ERROR_DELETE, true);
     })
+
   };
 
   return (
@@ -83,4 +84,5 @@ export default function Appointment(props) {
         {mode === ERROR_MISSING_INFO && <Error message= 'You must select an interviewer' onClose={() => back()}/>}
     </article>
   );
+  
 };

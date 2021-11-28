@@ -26,11 +26,11 @@ export default function useApplicationData() {
     });
   }, [])
 
-  function setDay(day) {
+  const setDay = function(day) {
     dispatch({ type: SET_DAY, value: day})
   }
   
-  function cancelInterview(id) {
+  const cancelInterview = function(id) {
     const nullAppointment = {
       ...state.appointments[id],
       interview: null
@@ -57,7 +57,7 @@ export default function useApplicationData() {
     })
   }
 
-  function bookInterview(id, interview) {
+  const bookInterview = function(id, interview) {
 
     let days = state.days;
 
@@ -90,4 +90,5 @@ export default function useApplicationData() {
   };
 
   return { state, setDay, bookInterview, cancelInterview }
+  
 };
