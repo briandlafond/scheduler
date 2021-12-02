@@ -29,7 +29,7 @@ export function getInterview(state, interview) {
 
 export function getInterviewersForDay(state, day) {
 
-  const filteredAppointments = state.days.filter(d => d.name === day);
+  const filteredAppointments = state.days.filter(days => days.name === day);
   
   let interviewers = [];
 
