@@ -10,7 +10,7 @@ export function getAppointmentsForDay(state, day) {
 
   return appointments;
 
-}
+};
 
 
 export function getInterview(state, interview) {
@@ -24,18 +24,19 @@ export function getInterview(state, interview) {
   }
   return interviewObj;
   
-}
+};
 
 
 export function getInterviewersForDay(state, day) {
 
   const filteredAppointments = state.days.filter(days => days.name === day);
-  
+
   let interviewers = [];
 
   if (filteredAppointments.length){
     interviewers = filteredAppointments[0].interviewers.map(x => state.interviewers[x]);
+    console.log(interviewers);
   }
   return interviewers;
 
-}
+};
