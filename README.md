@@ -34,16 +34,16 @@ npm run storybook
 ## Final Product
 
 - Schedule
-!["screenshot of schedule"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-11-28%20at%203.55.17%20PM.png)
+!["screenshot of schedule"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-12-12%20at%2012.07.36%20PM.png?raw=true)
 
 - Create Interview
-!["screenshot of create interview"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-11-28%20at%203.55.17%20PM.png)
+!["screenshot of create interview"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-12-12%20at%2012.08.09%20PM.png?raw=true)
 
 - Edit Interview
-!["screenshot of edit interview"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-11-28%20at%203.55.17%20PM.png)
+!["screenshot of edit interview"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-12-12%20at%2012.08.42%20PM.png?raw=true)
 
 - Delete Interview
-!["screenshot of delete interview"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-11-28%20at%203.55.17%20PM.png)
+!["screenshot of delete interview"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-12-12%20at%2012.09.01%20PM.png?raw=true)
 
 - Error Message
-!["screenshot or error"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-11-28%20at%203.55.17%20PM.png)
+!["screenshot or error"](https://github.com/briandlafond/scheduler/blob/master/docs/Screen%20Shot%202021-12-12%20at%2012.09.33%20PM.png?raw=true)
