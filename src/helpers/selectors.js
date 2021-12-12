@@ -35,7 +35,6 @@ export function getInterviewersForDay(state, day) {
 
   if (filteredAppointments.length){
     interviewers = filteredAppointments[0].interviewers.map(x => state.interviewers[x]);
-    console.log(interviewers);
   }
   return interviewers;
 

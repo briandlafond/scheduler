@@ -76,7 +76,6 @@ describe("Application", () => {
 
   });
 
-
   it("loads data, edits an interview and keeps the spots remaining for Monday the same", async () => {
     const { container } = render(<Application />);
 
@@ -87,9 +86,9 @@ describe("Application", () => {
     );
 
     fireEvent.click(queryByAltText(appointment, "Edit"));
-    await waitForElement(() => getByDisplayValue(appointment, "")); ///
+    await waitForElement(() => getByDisplayValue(appointment, "Archie Cohen")); ///
     
-    fireEvent.change(getByDisplayValue(appointment, ""), {
+    fireEvent.change(getByDisplayValue(appointment, "Archie Cohen"), {
       target: {value: "Test New"}
     })
 
@@ -103,7 +102,6 @@ describe("Application", () => {
     );
     expect(getByText(day, /1 spot remaining/i)).toBeInTheDocument();
   });
-
 
   it("shows the save error when failing to save an appointment", async () => {
     axios.put.mockRejectedValueOnce();
